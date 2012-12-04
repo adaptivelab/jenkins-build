@@ -1,0 +1,56 @@
+- job-template:
+    name: '{name}-build'
+    disabled: false
+    triggers:
+        - pollscm: "*/10 * * * *"
+    scm:
+        - git:
+              url: '{giturl}'
+              branches:
+                  - '{branch}'
+              wipe-workspace: False
+    publishers:
+        - coverage
+        - junit:
+            results: nosetests.xml
+        - violations:
+            cpd:
+                min: 10
+                max: 999
+                unstable: 999
+                pattern: 'output.xml'
+            pep8:
+                min: 10
+                max: 999
+                unstable: 999
+                pattern: 'pep8.out'
+            pylint:
+                min: 10
+                max: 999
+                unstable: 999
+                pattern: 'pylint.out'
+    builders:
+        - shell: "./jenkins.sh"
+    logrotate:
+        daysToKeep: 3
+        numToKeep: 10
+        artifactDaysToKeep: -1
+        artifactNumToKeep: -1
+
+- project:
+    name: beget
+    giturl: git://github.com/rob-b/Beget.git
+    branch: master
+    jobs:
+        - '{name}-build'
+
+- project:
+    name: gepetto
+    giturl: git://github.com/adaptivelab/gepetto.git
+    branch: develop
+    jobs:
+        - '{name}-build'
+
+- defaults:
+    name: global
+    description: "Do not edit this job via the web; it must be managed via jenkins jobs"
