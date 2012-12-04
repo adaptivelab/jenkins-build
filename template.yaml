@@ -46,7 +46,7 @@
 
 - project:
     name: gepetto
-    giturl: git://github.com/adaptivelab/gepetto.git
+    giturl: git@github.com:adaptivelab/gepetto.git
     branch: develop
     jobs:
         - '{name}-build'
