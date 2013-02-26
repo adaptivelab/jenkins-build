@@ -33,6 +33,15 @@ will not be executed again. The simple fix is to simply remove the cache file::
 
     rm ~/.jenkins_jobs_cache.yml
 
+Building a project
+------------------
+
+The jenkins templates are written to expect a `jenkins.sh` file in the root of
+the workspace that will be used to execute the build commands. An example can
+be seen in `gepetto
+<https://github.com/adaptivelab/gepetto/blob/develop/jenkins.sh>`_ or `caiman
+<https://github.com/adaptivelab/caiman/blob/develop/jenkins.sh>`_.
+
 
 Puppetmaster
 ~~~~~~~~~~~~
