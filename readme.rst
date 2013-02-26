@@ -46,7 +46,7 @@ Configuring a Project
 ---------------------
 
 To add new python jobs you can simply add a new project section to
-`template.yaml` and simply update the `name` and `giturl` fields to
+``template.yaml`` and simply update the ``name`` and ``giturl`` fields to
 appropriate values. Adding jobs for other languages/platforms for where the
 pep8 and pylint plugins are not applicable would require some investigation.
 
@@ -101,5 +101,5 @@ for the admin+githubjenkins user on github
 
 You can now see jenkins running on port 8080 in your browser but there are no
 jobs. Update jenkins_jobs.ini with the new url, delete
-`~/.jenkins_jobs_cache.yml` if it exists and run the commnads from above to
+``~/.jenkins_jobs_cache.yml`` if it exists and run the commands from above to
 create some new jobs
