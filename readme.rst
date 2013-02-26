@@ -46,7 +46,7 @@ Configuring a Project
 ---------------------
 
 To add new python jobs you can simply add a new project section to
-``template.yaml`` and simply update the ``name`` and ``giturl`` fields to
+``template.yaml`` and update the ``name`` and ``giturl`` fields to
 appropriate values. Adding jobs for other languages/platforms for where the
 pep8 and pylint plugins are not applicable would require some investigation.
 
