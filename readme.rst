@@ -82,7 +82,9 @@ create a puppetmaster on the same ci server::
 
     # if you're interested in the output you can stop the previously installed
     # puppet agent and run it in the foreground to see what happens. This will
-    # set the current instance with the requirements to run as our ci server
+    # setup the current instance with the requirements to run as our ci
+    # server.
+    #
     # Left to its own devices the agent should connect to the master but this
     # is untested and relies on correctly setup hostnames (gepetto's bootstrap
     # *did* correctly set the hosts at one point but the network architecture
