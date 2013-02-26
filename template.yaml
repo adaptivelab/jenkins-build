@@ -19,16 +19,16 @@
                 max: 999
                 unstable: 999
                 pattern: 'output.xml'
-            pep8:
-                min: 10
-                max: 999
-                unstable: 999
-                pattern: 'pep8.out'
             pylint:
                 min: 10
                 max: 999
                 unstable: 999
                 pattern: 'pylint.out'
+            pep8:
+                min: 10
+                max: 999
+                unstable: 999
+                pattern: 'pep8.out'
     builders:
         - shell: "./jenkins.sh"
     logrotate:
@@ -38,15 +38,29 @@
         artifactNumToKeep: -1
 
 - project:
-    name: beget
-    giturl: git://github.com/rob-b/Beget.git
-    branch: master
+    name: gepetto
+    giturl: git@github.com:adaptivelab/gepetto.git
+    branch: develop
     jobs:
         - '{name}-build'
 
 - project:
-    name: gepetto
-    giturl: git@github.com:adaptivelab/gepetto.git
+    name: soma-controller
+    giturl: git@github.com:adaptivelab/soma-controller.git
+    branch: develop
+    jobs:
+        - '{name}-build'
+
+- project:
+    name: soma-indexer
+    giturl: git@github.com:adaptivelab/soma-indexer.git
+    branch: develop
+    jobs:
+        - '{name}-build'
+
+- project:
+    name: caiman
+    giturl: git@github.com:adaptivelab/caiman.git
     branch: develop
     jobs:
         - '{name}-build'
