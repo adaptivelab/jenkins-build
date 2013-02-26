@@ -20,7 +20,7 @@
       <hudson.plugins.git.UserRemoteConfig>
         <name>origin</name>
         <refspec>+refs/heads/*:refs/remotes/origin/*</refspec>
-        <url>git@github.com:adaptivelab/gepetto.git</url>
+        <url>git@github.com:adaptivelab/soma-indexer.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
