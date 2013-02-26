@@ -69,7 +69,7 @@ perform some bootstrapping and attempt to connect to the puppetmaster. The
 puppetmaster is no more however and so we need to create one. For now we can
 create a puppetmaster on the same ci server::
 
-    somehow ascertain the address of the newly created gepetto server
+    # somehow ascertain the address of the newly created gepetto server
     git clone https://github.com/adaptivelab/puppet
     scp -r puppet ubuntu@gepettoserver:~/
     ssh ubuntu@gepettoserver
