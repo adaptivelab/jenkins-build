@@ -42,9 +42,17 @@ be seen in `gepetto
 <https://github.com/adaptivelab/gepetto/blob/develop/jenkins.sh>`_ or `caiman
 <https://github.com/adaptivelab/caiman/blob/develop/jenkins.sh>`_.
 
+Configuring a Project
+---------------------
+
+To add new python jobs you can simply add a new project section to
+`template.yaml` and simply update the `name` and `giturl` fields to
+appropriate values. Adding jobs for other languages/platforms for where the
+pep8 and pylint plugins are not applicable would require some investigation.
+
 
 Puppetmaster
-~~~~~~~~~~~~
+------------
 
 Building a jenkins server consists of three parts, this jenkins job builder
 for managing jobs, `gepetto <https://github.com/adaptivelab/gepetto>`_ for
