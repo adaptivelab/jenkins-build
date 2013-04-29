@@ -24,6 +24,10 @@ To create/update a job on jenkins::
 
     jenkins-jobs --conf jenkins_jobs.ini update template.yaml
 
+For jenkins to be able to fetch the code from github, you will also need to
+ensure the repo in question is added to the ``adaptivelab-jenkins`` team:
+https://github.com/organizations/adaptivelab/teams/295580
+
 
 jenkins-job-builder creates a cache of jobs it has seen in order to prevent
 needless api requests but the caching key only takes into consideration the
