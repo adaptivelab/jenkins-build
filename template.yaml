@@ -29,6 +29,12 @@
                 max: 999
                 unstable: 999
                 pattern: 'pep8.out'
+        - email-ext:
+            unstable: true
+            not-built: true
+            failure: true
+            success: true
+
     builders:
         - shell: "./jenkins.sh"
     logrotate:
