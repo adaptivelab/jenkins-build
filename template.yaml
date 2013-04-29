@@ -73,6 +73,13 @@
         - '{name}-build'
 
 - project:
+    name: soma-db
+    giturl: git@github.com:adaptivelab/soma-db.git
+    branch: develop
+    jobs:
+        - '{name}-build'
+
+- project:
     name: caiman
     giturl: git@github.com:adaptivelab/caiman.git
     branch: develop
