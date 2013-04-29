@@ -52,8 +52,22 @@
         - '{name}-build'
 
 - project:
+    name: soma-webapp
+    giturl: git@github.com:adaptivelab/soma-webapp.git
+    branch: develop
+    jobs:
+        - '{name}-build'
+
+- project:
     name: soma-indexer
     giturl: git@github.com:adaptivelab/soma-indexer.git
+    branch: develop
+    jobs:
+        - '{name}-build'
+
+- project:
+    name: soma-stream
+    giturl: git@github.com:adaptivelab/soma-stream.git
     branch: develop
     jobs:
         - '{name}-build'
