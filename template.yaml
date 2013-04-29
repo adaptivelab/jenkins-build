@@ -80,6 +80,13 @@
         - '{name}-build'
 
 - project:
+    name: soma-facebook-streamer
+    giturl: git@github.com:adaptivelab/soma-facebook-streamer.git
+    branch: develop
+    jobs:
+        - '{name}-build'
+
+- project:
     name: caiman
     giturl: git@github.com:adaptivelab/caiman.git
     branch: develop
