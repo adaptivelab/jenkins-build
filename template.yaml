@@ -43,12 +43,12 @@
         artifactDaysToKeep: -1
         artifactNumToKeep: -1
 
-- project:
-    name: gepetto
-    giturl: git@github.com:adaptivelab/gepetto.git
-    branch: develop
-    jobs:
-        - '{name}-build'
+# - project:
+#     name: gepetto
+#     giturl: git@github.com:adaptivelab/gepetto.git
+#     branch: develop
+#     jobs:
+#         - '{name}-build'
 
 - project:
     name: soma-controller

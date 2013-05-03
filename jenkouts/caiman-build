@@ -298,7 +298,7 @@
       </config>
     </hudson.plugins.violations.ViolationsPublisher>
     <hudson.plugins.emailext.ExtendedEmailPublisher>
-      <recipientList>edward@adaptivelab.co.uk</recipientList>
+      <recipientList>$DEFAULT_RECIPIENTS</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.UnstableTrigger>
           <email>
