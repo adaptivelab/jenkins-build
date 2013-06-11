@@ -58,9 +58,23 @@
         - '{name}-build'
 
 - project:
+    name: soma-controller-production
+    giturl: git@github.com:adaptivelab/soma-controller.git
+    branch: master
+    jobs:
+        - '{name}-build'
+
+- project:
     name: soma-webapp
     giturl: git@github.com:adaptivelab/soma-webapp.git
     branch: develop
+    jobs:
+        - '{name}-build'
+
+- project:
+    name: soma-webapp-production
+    giturl: git@github.com:adaptivelab/soma-webapp.git
+    branch: master
     jobs:
         - '{name}-build'
 
@@ -72,9 +86,23 @@
         - '{name}-build'
 
 - project:
+    name: soma-indexer-production
+    giturl: git@github.com:adaptivelab/soma-indexer.git
+    branch: master
+    jobs:
+        - '{name}-build'
+
+- project:
     name: soma-stream
     giturl: git@github.com:adaptivelab/soma-stream.git
     branch: develop
+    jobs:
+        - '{name}-build'
+
+- project:
+    name: soma-stream-production
+    giturl: git@github.com:adaptivelab/soma-stream.git
+    branch: master
     jobs:
         - '{name}-build'
 
@@ -86,6 +114,13 @@
         - '{name}-build'
 
 - project:
+    name: soma-db-production
+    giturl: git@github.com:adaptivelab/soma-db.git
+    branch: master
+    jobs:
+        - '{name}-build'
+
+- project:
     name: soma-facebook-streamer
     giturl: git@github.com:adaptivelab/soma-facebook-streamer.git
     branch: develop
@@ -93,9 +128,23 @@
         - '{name}-build'
 
 - project:
+    name: soma-facebook-streamer-production
+    giturl: git@github.com:adaptivelab/soma-facebook-streamer.git
+    branch: master
+    jobs:
+        - '{name}-build'
+
+- project:
     name: caiman
     giturl: git@github.com:adaptivelab/caiman.git
     branch: develop
+    jobs:
+        - '{name}-build'
+
+- project:
+    name: caiman-production
+    giturl: git@github.com:adaptivelab/caiman.git
+    branch: master
     jobs:
         - '{name}-build'
 
