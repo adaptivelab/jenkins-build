@@ -9,6 +9,7 @@
               branches:
                   - '{branch}'
               wipe-workspace: False
+              clean: True
     publishers:
         - coverage
         - junit:
