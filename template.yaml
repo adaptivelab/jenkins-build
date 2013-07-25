@@ -1,39 +1,33 @@
-# The adaptivelab-website job contains some stuff that jenkins job builder
-# doesn't yet know how to handle.  So for now, its XML has been added to jenkouts
-# in git.
-#
-# - job:
-#     name: adaptivelab-website
-#     disabled: false
-#     triggers:
-#         - pollscm: "* * * * *"
-#     scm:
-#         - git:
-#               url: git@github.com:adaptivelab/adaptivelab-website.git
-#               branches:
-#                   - master
-#               wipe-workspace: False
-#         - git:
-#               url: git@heroku.com:adaptive-lab-stage.git
-#               name: staging
-#         - git:
-#               url: git@heroku.com:adaptive-lab.git
-#               name: production
-#     publishers:
-#         - email-ext:
-#             unstable: true
-#             not-built: true
-#             failure: true
-#             success: true
-#         - git:
-
-#     builders:
-#         - shell: "./jenkins.sh"
-#     logrotate:
-#         daysToKeep: 3
-#         numToKeep: 10
-#         artifactDaysToKeep: -1
-#         artifactNumToKeep: -1
+- job:
+    name: adaptivelab-website
+    disabled: false
+    triggers:
+        - pollscm: "* * * * *"
+    scm:
+        - git:
+              url: git@github.com:adaptivelab/adaptivelab-website.git
+              branches:
+                  - master
+              wipe-workspace: False
+        - git:
+              url: git@heroku.com:adaptive-lab-stage.git
+              name: staging
+        - git:
+              url: git@heroku.com:adaptive-lab.git
+              name: production
+    publishers:
+        - email-ext:
+            unstable: true
+            not-built: true
+            failure: true
+            success: true
+    builders:
+        - shell: "./jenkins.sh"
+    logrotate:
+        daysToKeep: 3
+        numToKeep: 10
+        artifactDaysToKeep: -1
+        artifactNumToKeep: -1
 
 - job-template:
     name: '{name}-build'

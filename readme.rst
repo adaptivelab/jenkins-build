@@ -37,6 +37,17 @@ will not be executed again. The simple fix is to simply remove the cache file::
 
     rm ~/.jenkins_jobs_cache.yml
 
+Publishing to a git repo
+------------------------
+
+If you want one of your jobs to publish to heroku (for example), you will need to
+add the git publisher manually, until someone writes a git publisher handler for
+the Jenkins job builder.  Here's how:
+
+1. Set up the extra git repos by adding them to the yaml template as normal.
+2. Update the jenkins job(s)
+3. Log in to Jenkins and configure your project.  Add a Git Publisher to the Post Build actions and configure according to your needs.
+
 Building a project
 ------------------
 
