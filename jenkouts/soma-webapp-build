@@ -7,7 +7,6 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <concurrentBuild>false</concurrentBuild>
-  <canRoam>true</canRoam>
   <logRotator>
     <daysToKeep>3</daysToKeep>
     <numToKeep>10</numToKeep>
@@ -51,7 +50,7 @@
   </scm>
   <triggers class="vector">
     <hudson.triggers.SCMTrigger>
-      <spec>*/10 * * * *</spec>
+      <spec>* * * * *</spec>
     </hudson.triggers.SCMTrigger>
   </triggers>
   <builders>
